@@ -22,7 +22,7 @@
             </div>
           </a>
           <a href="" class="hidden w-full gap-2 items-center justify-between bg-gradient-to-br from-[#35d365] to-[#48bb78] px-3 py-5 text-white rounded-xl transition duration-150 hover:bg-[#207f40] fhd:gap-5 fhd:flex">
-            <i class="fa-solid fa-file-circle-plus fa-xl"></i>
+            <i class="fa-solid fa-file-circle-plus fa-lg"></i>
             <div class="w-full flex">
               <h2 class="text-sm font-bold fhd:text-lg">Mulai Rekam Kegiatan+</h2>
             </div>
@@ -129,6 +129,113 @@
                   </div>
                 </div>
                 <!-- Quick Insight End -->
+                <!-- Summary Start -->
+                <div class="w-full p-5 grid grid-cols-1 gap-5 bg-primary-20 rounded-2.5xl">
+                  <div class="flex flex-col gap-2 items-center">
+                    <!-- Chart Start -->
+                    <div class="w-full border border-primary-20 rounded-2.5xl p-5 bg-white flex flex-col">
+                      <div class="self-end text-primary flex gap-4 items-center">
+                        <i class="fa-solid fa-angle-left"></i>
+                        <h3 class="font-bold text-2xl">2023</h3>
+                        <i class="fa-solid fa-angle-right"></i>
+                      </div>
+                      <canvas id="myChart"></canvas>
+                    </div>
+                    <!-- Chart End -->
+                    <!-- Progress Start -->
+                    <div class="w-full p-5 flex flex-col gap-5 bg-white rounded-2.5xl">
+                      <!-- Title Start -->
+                      <div class="w-full flex gap-5 items-center justify-between">
+                        <form action="">
+                          <div class="grid grid-cols-2 items-center fhd:gap-2">
+                            <h3 class="text-base font-bold fhd:text-lg">Kegiatan Selama Bulan</h3>
+                            <select name="bulan" id="bulan" class="w-[136px] border text-primary bg-primary-20 rounded-2.5xl outline-none font-bold text-lg px-2 py-1">
+                              <option value="Januari">Januari</option>
+                              <option value="Februari">Februari</option>
+                              <option value="Maret">Maret</option>
+                              <option value="April">April</option>
+                              <option value="Mei">Mei</option>
+                              <option value="Juni">Juni</option>
+                              <option value="Juli">Juli</option>
+                              <option value="Agustus">Agustus</option>
+                              <option value="September">September</option>
+                              <option value="Oktober">Oktober</option>
+                              <option value="November">November</option>
+                              <option value="Desember">Desember</option>
+                            </select>
+                          </div>
+                        </form>
+                        <div class="grid grid-cols-2">
+                          <div class="flex gap-5 items-center px-4 border-r border-r-divide">
+                            <h2 class="text-primary font-semibold text-3xl">68</h2>
+                            <div class="flex flex-col gap-1">
+                              <h4 class="italic font-normal text-sm fhd:text-lg">Orang Muzakki</h4>
+                              <h6 class="font-light text-xs fhd:text-sm">
+                                <span class="text-[#52C41A]"><i class="fa-solid fa-angle-up"></i> 34 +</span> dari bulan sebelumnya
+                              </h6>
+                            </div>
+                          </div>
+                          <div class="flex gap-5 items-center px-4 border-l border-l-divide">
+                            <h2 class="text-primary font-semibold text-3xl">28</h2>
+                            <div class="flex flex-col gap-1">
+                              <h4 class="italic font-normal text-sm fhd:text-lg">Jam Pelayanan</h4>
+                              <h6 class="font-light text-xs fhd:text-sm">
+                                <span class="text-[#52C41A]"><i class="fa-solid fa-angle-up"></i> 4 +</span> dari bulan sebelumnya
+                              </h6>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- Title End -->
+                      <div class="w-full flex flex-col gap-5">
+                        <div class="w-full flex justify-between gap-5">
+                          <div class="flex items-center justify-center px-4 py-8 rounded-2.5xl bg-[#FFF5DA] flex-grow-0">
+                            <i class="fa-solid fa-head-side-cough text-secondary fa-2xl"></i>
+                          </div>
+                          <div class="flex flex-col gap-2 items-center justify-center flex-grow">
+                            <div class="w-full h-[6px] bg-[#efefef] rounded-full overflow-hidden">
+                              <div class="h-full bg-secondary rounded-full" style="width: 75%"></div>
+                            </div>
+                            <h6 class="self-start text-disable font-light text-base italic">Konsultasi</h6>
+                          </div>
+                          <div class="flex items-center justify-center">
+                            <h4 class="text-disable text-2xl font-semibold">64%</h4>
+                          </div>
+                        </div>
+                        <div class="w-full flex justify-between gap-5">
+                          <div class="flex items-center justify-center px-4 py-8 rounded-2.5xl bg-primary-20 flex-grow-0">
+                            <i class="fa-solid fa-hand-holding-heart text-primary fa-2xl"></i>
+                          </div>
+                          <div class="flex flex-col gap-2 items-center justify-center flex-grow">
+                            <div class="w-full h-[6px] bg-[#efefef] rounded-full overflow-hidden">
+                              <div class="h-full bg-primary rounded-full" style="width: 84%"></div>
+                            </div>
+                            <h6 class="self-start text-disable font-light text-base italic">Pembayaran</h6>
+                          </div>
+                          <div class="flex items-center justify-center">
+                            <h4 class="text-disable text-2xl font-semibold">84%</h4>
+                          </div>
+                        </div>
+                        <div class="w-full flex justify-between gap-5">
+                          <div class="flex items-center justify-center px-4 py-8 rounded-2.5xl bg-[#CCE9FF] flex-grow-0">
+                            <i class="fa-solid fa-gear text-[#0093FF] fa-2xl"></i>
+                          </div>
+                          <div class="flex flex-col gap-2 items-center justify-center flex-grow">
+                            <div class="w-full h-[6px] bg-[#efefef] rounded-full overflow-hidden">
+                              <div class="h-full bg-[#0093FF] rounded-full" style="width: 64%"></div>
+                            </div>
+                            <h6 class="self-start text-disable font-light text-base italic">Lainnya</h6>
+                          </div>
+                          <div class="flex items-center justify-center">
+                            <h4 class="text-disable text-2xl font-semibold">64%</h4>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- Progress End -->
+                  </div>
+                </div>
+                <!-- Summary End -->
               </div>
             </div>
             <!-- Contain 1 End -->
@@ -141,5 +248,60 @@
       </div>
     </div>
     <script src="https://kit.fontawesome.com/e1744d5724.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+      const months = Array.from({ length: 12 }, (item, i) => {
+        return new Date(0, i).toLocaleString("id-ID", { month: "short" });
+      });
+      const ctx = document.getElementById("myChart");
+
+      new Chart(ctx, {
+        type: "line",
+        data: {
+          labels: months,
+          datasets: [
+            {
+              label: "# Jumlah Muzakki",
+              data: [42, 40, 45, 72, 60, 68],
+              borderColor: "#ffcb45",
+              radius: 5,
+              borderWidth: 3,
+              hoverRadius: 10,
+              hoverBorderWidth: 5,
+              backgroundColor: "#259047",
+            },
+          ],
+        },
+        options: {
+          aspectRatio: 3 / 1,
+          plugins: {
+            legend: {
+              labels: {
+                font: {
+                  family: "'Inter', 'sans-serif'",
+                  weight: "bold",
+                  size: "16",
+                },
+              },
+            },
+          },
+          scales: {
+            y: {
+              beginAtZero: true,
+            },
+            x: {
+              ticks: {
+                color: "#259047",
+                font: {
+                  family: "'Inter', 'sans-serif'",
+                  weight: "bold",
+                  size: "18",
+                },
+              },
+            },
+          },
+        },
+      });
+    </script>
   </body>
 </html>

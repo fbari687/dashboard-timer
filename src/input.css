@@ -10,3 +10,7 @@
 .active {
   @apply bg-primary text-white hover:bg-[#207f40];
 }
+
+.bulan-selected {
+  @apply bg-primary-20;
+}
