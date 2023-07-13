@@ -81,18 +81,19 @@
         </nav>
         <!-- Navbar End -->
         <!-- Content Start -->
-        <div class="pt-[126px] px-5 pb-5 border">
-          <div class="flex gap-5 items-center">
+        <div class="py-[126px] px-5 border">
+          <div class="flex gap-5 h-[1361px] max-h-[1361px] fhd:h-[1486px] fhd:max-h-[1486px]">
             <!-- Contain 1 Start -->
-            <div class="w-[74.647887%] container mx-auto">
+            <div class="w-[74.647887%] h-full container mx-auto">
               <div class="w-full flex flex-col gap-5">
                 <!-- Quick Insight Start -->
                 <div class="w-full p-5 flex flex-col items-center gap-5 bg-primary-20 rounded-2.5xl">
                   <div class="w-full flex items-center justify-between">
                     <h3 class="font-bold text-dark text-lg">Quick Insight</h3>
-                    <div class="px-3 py-1 flex items-center gap-2 bg-white text-dark rounded-2.5xl">
-                      <h4 class="font-semibold text-lg text-dark">16 Juni 2023</h4>
-                      <i class="fa-solid fa-angle-down"></i>
+                    <div class="px-3 py-1 flex items-center gap-2 text-dark rounded-2.5xl">
+                      <form action="">
+                        <input type="date" name="tanggal" value="2023-06-16" class="outline-none font-bold text-dark px-3 py-1 rounded-2.5xl" />
+                      </form>
                     </div>
                   </div>
                   <div class="w-full grid grid-cols-3 gap-5 items-stretch justify-between">
@@ -135,9 +136,11 @@
                     <!-- Chart Start -->
                     <div class="w-full border border-primary-20 rounded-2.5xl p-5 bg-white flex flex-col">
                       <div class="self-end text-primary flex gap-4 items-center">
-                        <i class="fa-solid fa-angle-left"></i>
-                        <h3 class="font-bold text-2xl">2023</h3>
-                        <i class="fa-solid fa-angle-right"></i>
+                        <button type="button" class="fa-solid fa-angle-left"></button>
+                        <form action="" class="">
+                          <input type="number" name="tahun" id="tahun" value="2023" class="w-16 font-bold text-2xl" />
+                        </form>
+                        <button type="button" class="fa-solid fa-angle-right"></button>
                       </div>
                       <canvas id="myChart"></canvas>
                     </div>
@@ -236,11 +239,333 @@
                   </div>
                 </div>
                 <!-- Summary End -->
+                <!-- Recent Report Start -->
+                <div class="w-full p-5 grid grid-cols-1 rounded-2.5xl bg-primary-20">
+                  <div class="bg-white p-5 rounded-2.5xl flex flex-col gap-5">
+                    <div class="flex flex-col gap-2 items-center">
+                      <div class="flex gap-2 items-center self-start">
+                        <h5 class="text-lg font-bold">Laporan Terakhir</h5>
+                        <i class="fa-regular fa-note-sticky font-bold"></i>
+                      </div>
+                      <div class="w-full flex items-center justify-between">
+                        <div class="flex flex-col gap-1">
+                          <h5 class="italic text-base font-normal">NPWZ : 2198765</h5>
+                          <h5 class="italic text-base font-normal">Amil : Alexander Wisnu</h5>
+                        </div>
+                        <div class="h-full flex gap-5 items-center">
+                          <h5 class="text-base font-normal text-primary">16/06/23 - 10.35</h5>
+                          <div class="flex py-2 px-3 bg-primary-20 items-center justify-center text-[#52C41A] gap-2 rounded-2.5xl">
+                            <h4 class="text-lg">Completed</h4>
+                            <i class="fa-solid fa-check fa-lg"></i>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full grid grid-cols-3">
+                      <div class="p-5 flex flex-col gap-3">
+                        <div class="w-full flex items-center justify-center">
+                          <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-scroll fa-lg text-primary"></i>
+                            <h4 class="text-lg font-bold">Catatan</h4>
+                          </div>
+                        </div>
+                        <div class="w-full h-full flex items-center justify-center rounded-md border border-divide">
+                          <h4 class="text-base italic text-divide text-center">Klik Untuk Melihat Catatan</h4>
+                        </div>
+                      </div>
+                      <div class="p-5 flex flex-col gap-3 border-x-2 border-x-divide">
+                        <div class="w-full flex items-center justify-center">
+                          <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-stopwatch fa-lg text-primary"></i>
+                            <h4 class="text-lg font-bold">Waktu</h4>
+                          </div>
+                        </div>
+                        <div class="w-full h-full flex flex-col items-center justify-center gap-2 rounded-md">
+                          <h2 class="text-5xl font-bold">43</h2>
+                          <h6 class="text-lg font-normal">menit</h6>
+                        </div>
+                      </div>
+                      <div class="p-5 flex flex-col gap-3">
+                        <div class="w-full flex items-center justify-center">
+                          <div class="flex gap-2 items-center">
+                            <i class="fa-solid fa-flag fa-lg text-primary"></i>
+                            <h4 class="text-lg font-bold">Catatan</h4>
+                          </div>
+                        </div>
+                        <div class="w-full h-full flex flex-col items-center justify-center gap-2 rounded-md">
+                          <div class="w-36 rounded-2.5xl px-3 py-2 flex gap-2 shadow-md items-center">
+                            <div class="px-1 py-3 bg-secondary rounded-full"></div>
+                            <h5 class="w-full font-bold text-lg">Konsultasi</h5>
+                          </div>
+                          <div class="w-36 rounded-2.5xl px-3 py-2 flex gap-2 shadow-md items-center">
+                            <div class="px-1 py-3 bg-primary rounded-full"></div>
+                            <h5 class="w-full font-bold text-lg">Zakat</h5>
+                          </div>
+                          <div class="w-36 rounded-2.5xl px-3 py-2 flex gap-2 shadow-md items-center">
+                            <div class="px-1 py-3 bg-[#0093FF] rounded-full"></div>
+                            <h5 class="w-full font-bold text-lg">Lainnya</h5>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Recent Report End -->
               </div>
             </div>
             <!-- Contain 1 End -->
             <!-- Contain 2 Start -->
-            <div class="w-[25.352113%] bg-dark text-white">tess2</div>
+            <div class="w-[25.352113%] h-full border container mx-auto">
+              <div class="w-full grid grid-cols-1 gap-5">
+                <!-- LeaderBoard Start -->
+                <div class="w-full p-5 flex flex-col gap-5 bg-primary-20 rounded-2.5xl">
+                  <div class="w-full flex items-center justify-between">
+                    <div class="flex flex-col items-start">
+                      <h3 class="font-bold text-lg">Leaderboard Amil</h3>
+                      <h6 class="text-sm">(Dalam Rentang 10 Hari)</h6>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square font-bold text-lg"></i>
+                  </div>
+                  <div class="w-full grid grid-cols-1 gap-5">
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <h5 class="w-full text-center text-base font-semibold text-primary fhd:text-lg">Alexander Wisnu</h5>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex flex-col gap-2">
+                        <div class="w-full flex items-center gap-2 justify-between">
+                          <i class="fa-solid fa-user-group text-primary"></i>
+                          <div class="w-full flex items-start justify-start">
+                            <h6 class="text-sm fhd:text-lg">49 Orang</h6>
+                          </div>
+                        </div>
+                        <div class="w-full flex items-center gap-2 justify-between">
+                          <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                          <div class="w-full flex items-start justify-start">
+                            <h6 class="text-sm fhd:text-lg">31 Jam</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <h5 class="w-full text-center text-base font-semibold text-primary fhd:text-lg">Darwin Nurendra</h5>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex flex-col gap-2">
+                        <div class="w-full flex items-center gap-2 justify-between">
+                          <i class="fa-solid fa-user-group text-primary"></i>
+                          <div class="w-full flex items-start justify-start">
+                            <h6 class="text-sm fhd:text-lg">43 Orang</h6>
+                          </div>
+                        </div>
+                        <div class="w-full flex items-center gap-2 justify-between">
+                          <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                          <div class="w-full flex items-start justify-start">
+                            <h6 class="text-sm fhd:text-lg">29 Jam</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <h5 class="w-full text-center text-base font-semibold text-primary fhd:text-lg">D.N Aidit</h5>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex flex-col gap-2">
+                        <div class="w-full flex items-center gap-2 justify-between">
+                          <i class="fa-solid fa-user-group text-primary"></i>
+                          <div class="w-full flex items-start justify-start">
+                            <h6 class="text-sm fhd:text-lg">36 Orang</h6>
+                          </div>
+                        </div>
+                        <div class="w-full flex items-center gap-2 justify-between">
+                          <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                          <div class="w-full flex items-start justify-start">
+                            <h6 class="text-sm fhd:text-lg">28 Jam</h6>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- LeaderBoard End -->
+                <!-- History Start -->
+                <div class="w-full p-5 flex flex-col gap-5 bg-primary-20 rounded-2.5xl">
+                  <div class="w-full flex items-center justify-between">
+                    <div class="flex flex-col items-start">
+                      <h3 class="font-bold text-lg">Aktivitas 7 hari yang lalu</h3>
+                    </div>
+                    <i class="fa-solid fa-arrow-up-right-from-square font-bold text-lg"></i>
+                  </div>
+                  <div class="w-full grid grid-cols-1 gap-5 overflow-y-auto">
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <div class="w-1/3 text-center text-primary fhd:text-lg">
+                        <h5 class="text-base font-semibold fhd:text-lg">Kamis</h5>
+                        <h3 class="text-4xl">15</h3>
+                      </div>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex gap-5 justify-between items-center">
+                        <div class="w-full flex flex-col gap-2">
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-user-group text-primary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">8 Orang</h6>
+                            </div>
+                          </div>
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">7 Jam</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-down text-alert-cancel"></i>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <div class="w-1/3 text-center text-primary fhd:text-lg">
+                        <h5 class="text-base font-semibold fhd:text-lg">Rabu</h5>
+                        <h3 class="text-4xl">14</h3>
+                      </div>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex gap-5 justify-between items-center">
+                        <div class="w-full flex flex-col gap-2">
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-user-group text-primary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">9 Orang</h6>
+                            </div>
+                          </div>
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">7 Jam</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-down text-alert-cancel"></i>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <div class="w-1/3 text-center text-primary fhd:text-lg">
+                        <h5 class="text-base font-semibold fhd:text-lg">Selasa</h5>
+                        <h3 class="text-4xl">13</h3>
+                      </div>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex gap-5 justify-between items-center">
+                        <div class="w-full flex flex-col gap-2">
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-user-group text-primary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">13 Orang</h6>
+                            </div>
+                          </div>
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">8 Jam</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-up text-[#52C41A]"></i>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <div class="w-1/3 text-center text-primary fhd:text-lg">
+                        <h5 class="text-base font-semibold fhd:text-lg">Senin</h5>
+                        <h3 class="text-4xl">12</h3>
+                      </div>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex gap-5 justify-between items-center">
+                        <div class="w-full flex flex-col gap-2">
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-user-group text-primary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">11 Orang</h6>
+                            </div>
+                          </div>
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">8 Jam</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-up text-alert-success"></i>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <div class="w-1/3 text-center text-primary fhd:text-lg">
+                        <h5 class="text-base font-semibold fhd:text-lg">Minggu</h5>
+                        <h3 class="text-4xl">11</h3>
+                      </div>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex gap-5 justify-between items-center">
+                        <div class="w-full flex flex-col gap-2">
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-user-group text-primary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">6 Orang</h6>
+                            </div>
+                          </div>
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">4 Jam</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-down text-alert-cancel"></i>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <div class="w-1/3 text-center text-primary fhd:text-lg">
+                        <h5 class="text-base font-semibold fhd:text-lg">Sabtu</h5>
+                        <h3 class="text-4xl">10</h3>
+                      </div>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex gap-5 justify-between items-center">
+                        <div class="w-full flex flex-col gap-2">
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-user-group text-primary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">8 Orang</h6>
+                            </div>
+                          </div>
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">5 Jam</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-down text-alert-cancel"></i>
+                      </div>
+                    </div>
+                    <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
+                      <div class="w-1/3 text-center text-primary fhd:text-lg">
+                        <h5 class="text-base font-semibold fhd:text-lg">Jum'at</h5>
+                        <h3 class="text-4xl">9</h3>
+                      </div>
+                      <div class="border h-full border-divide"></div>
+                      <div class="w-full flex gap-5 justify-between items-center">
+                        <div class="w-full flex flex-col gap-2">
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-user-group text-primary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">8 Orang</h6>
+                            </div>
+                          </div>
+                          <div class="w-full flex items-center gap-2 justify-between">
+                            <i class="fa-solid fa-stopwatch fa-lg text-secondary"></i>
+                            <div class="w-full flex items-start justify-start">
+                              <h6 class="text-sm fhd:text-lg">7 Jam</h6>
+                            </div>
+                          </div>
+                        </div>
+                        <i class="fa-solid fa-arrow-trend-up text-alert-success"></i>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- History End -->
+              </div>
+            </div>
             <!-- Contain 2 End -->
           </div>
         </div>

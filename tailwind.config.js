@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./index.html", "./table.html", "./user.html"],
+  content: ["./*.{html, js}"],
   theme: {
     extend: {
       colors: {
@@ -10,6 +10,8 @@ module.exports = {
         dark: "#393938",
         disable: "#777675",
         divide: "#d9d9d9",
+        "alert-success": "#52C41A",
+        "alert-cancel": "#FF4D4F",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
