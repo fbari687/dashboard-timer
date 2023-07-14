@@ -12,6 +12,7 @@ module.exports = {
         divide: "#d9d9d9",
         "alert-success": "#52C41A",
         "alert-cancel": "#FF4D4F",
+        overlay: "rgba(0, 0, 0, 0.5)",
       },
       fontFamily: {
         inter: ["Inter", "sans-serif"],
@@ -22,6 +23,9 @@ module.exports = {
       },
       borderRadius: {
         "2.5xl": "20px",
+      },
+      boxShadow: {
+        "inner-custom": "1px 5px 27px 4px rgba(56,56,56,0.64) inset;",
       },
     },
   },

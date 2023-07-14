@@ -15,32 +15,32 @@
       <aside class="w-1/6 h-screen fixed bg-white border-r border-r-divide">
         <div class="flex flex-col py-10 h-full items-center gap-5 hd:px-2 2xl:px-5 fhd:px-5">
           <img src="./dist/img/logo.png" alt="" />
-          <a href="" class="w-full flex gap-2 items-center justify-between bg-gradient-to-br from-[#35d365] to-[#48bb78] px-3 py-5 text-white rounded-xl transition duration-150 hover:bg-[#207f40] fhd:gap-5 fhd:hidden">
+          <a href="rekamWelcome.html" class="w-full flex gap-2 items-center justify-between bg-gradient-to-br from-[#35d365] to-[#48bb78] px-3 py-5 text-white rounded-xl transition duration-150 hover:bg-[#207f40] fhd:gap-5 fhd:hidden">
             <i class="fa-solid fa-file-circle-plus"></i>
             <div class="w-full flex">
               <h2 class="text-sm font-bold fhd:text-lg">Mulai Rekam Kegiatan+</h2>
             </div>
           </a>
-          <a href="" class="hidden w-full gap-2 items-center justify-between bg-gradient-to-br from-[#35d365] to-[#48bb78] px-3 py-5 text-white rounded-xl transition duration-150 hover:bg-[#207f40] fhd:gap-5 fhd:flex">
+          <a href="rekamWelcome.html" class="hidden w-full gap-2 items-center justify-between bg-gradient-to-br from-[#35d365] to-[#48bb78] px-3 py-5 text-white rounded-xl transition duration-150 hover:bg-[#207f40] fhd:gap-5 fhd:flex">
             <i class="fa-solid fa-file-circle-plus fa-lg"></i>
             <div class="w-full flex">
               <h2 class="text-sm font-bold fhd:text-lg">Mulai Rekam Kegiatan+</h2>
             </div>
           </a>
           <div class="grid grid-cols-1 items-center px-2 w-full gap-3 hd:px-0">
-            <a href="" class="sidebarItems active">
+            <a href="index.html" class="sidebarItems active">
               <i class="fa-solid fa-chart-simple"></i>
               <div class="w-full flex">
                 <h2 class="text-base font-bold fhd:text-lg">Dashboard</h2>
               </div>
             </a>
-            <a href="" class="sidebarItems">
+            <a href="riwayat.html" class="sidebarItems">
               <i class="fa-solid fa-clock"></i>
               <div class="w-full flex">
                 <h2 class="text-base font-bold">Riwayat</h2>
               </div>
             </a>
-            <a href="" class="sidebarItems">
+            <a href="user.html" class="sidebarItems">
               <i class="fa-solid fa-user-large"></i>
               <div class="w-full flex">
                 <h2 class="text-base font-bold">User</h2>
@@ -65,7 +65,7 @@
           <h4 class="font-bold text-3xl text-primary uppercase">Dash<span class="text-secondary">board</span></h4>
           <!-- Title End -->
           <!-- Profile Start -->
-          <div class="flex gap-5 items-center">
+          <div id="dropdownBtn" class="flex gap-5 items-center relative cursor-pointer">
             <div class="flex flex-col gap-1 text-right">
               <h3 class="text-primary text-2xl font-semibold">Fahri Leonhart</h3>
               <h5 class="text-lg font-light">SUPERADMIN</h5>
@@ -75,6 +75,13 @@
             </div>
             <div class="flex items-center justify-center">
               <i class="fa-solid fa-ellipsis-vertical"></i>
+            </div>
+            <!-- Logout Start -->
+            <div id="dropdown" class="hidden absolute bg-dark text-white right-2 top-[70px] px-5 py-3 rounded-md">
+              <a href="" class="w-full bg-dark flex items-center justify-center gap-5 py-2 px-4 transition duration-150 rounded-full hover:bg-alert-cancel">
+                <i class="fa-solid fa-right-from-bracket fa-lg"></i>
+                <h4 class="text-base">Log out</h4>
+              </a>
             </div>
           </div>
           <!-- Profile End -->
@@ -324,7 +331,6 @@
                       <h3 class="font-bold text-lg">Leaderboard Amil</h3>
                       <h6 class="text-sm">(Dalam Rentang 10 Hari)</h6>
                     </div>
-                    <i class="fa-solid fa-arrow-up-right-from-square font-bold text-lg"></i>
                   </div>
                   <div class="w-full grid grid-cols-1 gap-5">
                     <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
@@ -390,7 +396,6 @@
                     <div class="flex flex-col items-start">
                       <h3 class="font-bold text-lg">Aktivitas 7 hari yang lalu</h3>
                     </div>
-                    <i class="fa-solid fa-arrow-up-right-from-square font-bold text-lg"></i>
                   </div>
                   <div class="w-full grid grid-cols-1 gap-5 overflow-y-auto">
                     <div class="w-full p-3 bg-white flex gap-5 rounded-2.5xl items-center">
@@ -626,6 +631,13 @@
             },
           },
         },
+      });
+
+      const dropdownBtn = document.getElementById("dropdownBtn");
+      const dropdown = document.getElementById("dropdown");
+
+      dropdownBtn.addEventListener("click", () => {
+        dropdown.classList.toggle("hidden");
       });
     </script>
   </body>

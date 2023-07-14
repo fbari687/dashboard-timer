@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <title>Halaman Rekam Data</title>
+    <link rel="stylesheet" href="dist/css/style.css" />
+  </head>
+  <body class="font-inter">
+    <form action="" id="rekam" class="w-screen h-screen flex relative">
+      <!-- Contain Left Start -->
+      <div class="container w-1/2 bg-white p-[50px] flex flex-col gap-3 max-h-screen">
+        <button type="button" name="cancel" class="w-1/6 flex gap-2 px-4 py-2 bg-alert-cancel text-white items-center justify-center rounded-md transition duration-150 hover:bg-[#f4484b]">
+          <i class="fa-solid fa-caret-left"></i>
+          <h2 class="font-bold">Cancel</h2>
+        </button>
+        <div class="w-full border shadow-md p-[50px] flex flex-col gap-3 items-center">
+          <h3 class="w-full text-center font-bold text-2xl">NPWZ</h3>
+          <input type="text" name="npwz" id="npwz" class="w-2/3 py-1 px-2 text-center bg-[#f5f5f5] outline-none shadow-inner" />
+        </div>
+        <div class="w-full py-10 px-[30px] grid grid-cols-3 gap-7">
+          <label for="konsultasi" class="deactive text-white py-6 px-4 flex items-center justify-center rounded-md cursor-pointer">
+            <h3 class="font-bold text-2xl">Konsultasi</h3>
+            <input type="radio" name="pelayanan" id="konsultasi" value="konsultasi" class="radioPelayanan" hidden required />
+          </label>
+          <label for="pembayaran" class="deactive text-white py-6 px-4 flex items-center justify-center rounded-md cursor-pointer">
+            <h3 class="font-bold text-2xl">Pembayaran</h3>
+            <input type="radio" name="pelayanan" id="pembayaran" value="pembayaran" class="radioPelayanan" hidden />
+          </label>
+          <label for="lainnya" class="deactive text-white py-6 px-4 flex items-center justify-center rounded-md cursor-pointer">
+            <h3 class="font-bold text-2xl">Lainnya</h3>
+            <input type="radio" name="pelayanan" id="lainnya" value="lainnya" class="radioPelayanan" hidden />
+          </label>
+        </div>
+        <div class="w-full flex flex-col gap-5 py-4 px-5">
+          <h4 class="w-full font-bold text-2xl">Deskripsi (Opsional)</h4>
+          <div class="w-full max-h-full border rounded-2.5xl bg-[#f5f5f5] shadow-inner overflow-hidden">
+            <textarea name="Deskripsi" id="deskripsi" class="bg-transparent w-full p-4 outline-none" rows="6"></textarea>
+          </div>
+        </div>
+      </div>
+      <!-- Contain Left End -->
+      <!-- Contain Right Start -->
+      <div class="container w-1/2 bg-primary p-[50px] flex flex-col gap-10 items-center justify-center">
+        <button type="submit" class="bg-secondary text-white flex items-center justify-center p-8 w-52 rounded-full transition duration-150 hover:bg-[#e1b035]">
+          <h3 class="text-2xl font-bold">Next</h3>
+        </button>
+        <button type="button" name="selesai" class="bg-alert-cancel text-white flex items-center justify-center p-8 w-52 rounded-full transition duration-150 hover:bg-[#f4484b]">
+          <h3 class="text-2xl font-bold">Selesai</h3>
+        </button>
+      </div>
+      <!-- Contain Right End -->
+
+      <!-- Overlay -->
+      <div class="hidden absolute w-screen h-screen bg-overlay" id="overlay">
+        <div class="flex items-center justify-center w-full h-full">
+          <!-- Confirm Start -->
+          <div class="hidden w-1/3 h-1/3 bg-white rounded-2.5xl" id="confirm">
+            <div class="w-full h-full flex flex-col p-10 items-center justify-center gap-12">
+              <div class="w-full text-center text-3xl font-bold fhd:text-4xl">Anda Yakin Akan Menyelesaikan?</div>
+              <div class="w-full grid grid-cols-2 gap-10">
+                <button type="button" name="confirmNo" class="bg-alert-cancel flex items-center justify-center px-4 py-4 text-white rounded-full transition duration-150 hover:bg-[#f4484b]">
+                  <h3 class="font-bold text-2xl">Belum</h3>
+                </button>
+                <button type="submit" name="confirmYes" class="bg-alert-success flex items-center justify-center px-4 py-4 text-white rounded-full transition duration-150 hover:bg-[#4fbc19]">
+                  <h3 class="font-bold text-2xl">Iya</h3>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Confirm End -->
+          <!-- Catatan Start -->
+          <div class="hidden w-1/3 bg-white rounded-2.5xl" id="notes">
+            <div class="w-full h-full flex flex-col p-10 items-center justify-center gap-12">
+              <div class="w-full text-center text-3xl font-bold">Tambahkan Catatan (Opsional)</div>
+              <div class="w-full max-h-full border rounded-2.5xl bg-[#f5f5f5] shadow-inner overflow-hidden">
+                <textarea name="catatan" id="catatan" class="bg-transparent w-full p-4 outline-none" rows="6"></textarea>
+              </div>
+              <div class="w-1/2 grid grid-cols-1 gap-10">
+                <button type="button" name="lanjutCatatan" class="bg-alert-success flex items-center justify-center px-4 py-4 text-white rounded-full transition duration-150 hover:bg-[#4fbc19]">
+                  <h3 class="font-bold text-2xl">Lanjut</h3>
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Catatan End -->
+          <!-- Confirm Cancel Start -->
+          <div class="hidden w-1/3 h-1/3 bg-white rounded-2.5xl" id="cancel">
+            <div class="w-full h-full flex flex-col p-10 items-center justify-center gap-12">
+              <div class="w-full text-center text-3xl font-bold fhd:text-4xl">Anda Yakin Akan Keluar?</div>
+              <div class="w-full grid grid-cols-2 gap-10">
+                <button type="button" name="cancelNo" class="bg-alert-cancel flex items-center justify-center px-4 py-4 text-white rounded-full transition duration-150 hover:bg-[#f4484b]">
+                  <h3 class="font-bold text-2xl">Belum</h3>
+                </button>
+                <a href="index.html" class="bg-alert-success flex items-center justify-center px-4 py-4 text-white rounded-full transition duration-150 hover:bg-[#4fbc19]">
+                  <h3 class="font-bold text-2xl">Iya</h3>
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- Confirm Cancel End -->
+        </div>
+      </div>
+    </form>
+    <script src="https://kit.fontawesome.com/e1744d5724.js" crossorigin="anonymous"></script>
+
+    <script>
+      const radioKonsultasi = document.getElementById("konsultasi");
+      const radioPembayaran = document.getElementById("pembayaran");
+      const radioLainnya = document.getElementById("lainnya");
+
+      radioKonsultasi.addEventListener("change", function () {
+        let parent = this.parentElement;
+
+        parent.classList.remove("deactive");
+        parent.classList.add("active");
+
+        parent.nextElementSibling.classList.add("deactive");
+        parent.nextElementSibling.classList.remove("active");
+        parent.nextElementSibling.nextElementSibling.classList.add("deactive");
+        parent.nextElementSibling.nextElementSibling.classList.remove("active");
+      });
+
+      radioPembayaran.addEventListener("change", function () {
+        let parent = this.parentElement;
+
+        parent.classList.remove("deactive");
+        parent.classList.add("active");
+
+        parent.nextElementSibling.classList.add("deactive");
+        parent.nextElementSibling.classList.remove("active");
+        parent.previousElementSibling.classList.add("deactive");
+        parent.previousElementSibling.classList.remove("active");
+      });
+
+      radioLainnya.addEventListener("change", function () {
+        let parent = this.parentElement;
+
+        parent.classList.remove("deactive");
+        parent.classList.add("active");
+
+        parent.previousElementSibling.classList.add("deactive");
+        parent.previousElementSibling.classList.remove("active");
+        parent.previousElementSibling.previousElementSibling.classList.add("deactive");
+        parent.previousElementSibling.previousElementSibling.classList.remove("active");
+      });
+
+      const overlayModal = document.getElementById("overlay");
+      const modalCancel = document.getElementById("cancel");
+      const cancelNo = document.getElementsByName("cancelNo")[0];
+      const modalConfirm = document.getElementById("confirm");
+      const confirmYes = document.getElementsByName("confirmYes")[0];
+      const confirmNo = document.getElementsByName("confirmNo")[0];
+      const modalCatatan = document.getElementById("notes");
+      const lanjutCatatan = document.getElementsByName("lanjutCatatan")[0];
+      const btnCancel = document.getElementsByName("cancel")[0];
+      const btnSelesai = document.getElementsByName("selesai")[0];
+
+      btnSelesai.addEventListener("click", function () {
+        overlayModal.classList.toggle("hidden");
+        modalCatatan.classList.toggle("hidden");
+      });
+
+      lanjutCatatan.addEventListener("click", () => {
+        modalConfirm.classList.toggle("hidden");
+        modalCatatan.classList.toggle("hidden");
+      });
+
+      confirmNo.addEventListener("click", () => {
+        modalConfirm.classList.add("hidden");
+        modalCatatan.classList.add("hidden");
+        modalCancel.classList.add("hidden");
+        overlayModal.classList.add("hidden");
+      });
+
+      btnCancel.addEventListener("click", () => {
+        overlayModal.classList.toggle("hidden");
+        modalCancel.classList.toggle("hidden");
+      });
+
+      cancelNo.addEventListener("click", () => {
+        modalCancel.classList.add("hidden");
+        overlayModal.classList.add("hidden");
+      });
+    </script>
+  </body>
+</html>

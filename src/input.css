@@ -7,6 +7,10 @@
   @apply w-full flex gap-5 items-center justify-between bg-white py-2 px-6 text-dark rounded-2.5xl transition duration-150 hover:bg-gray-200;
 }
 
+.deactive {
+  @apply bg-[#3A3A2F];
+}
+
 .active {
   @apply bg-primary text-white hover:bg-[#207f40];
 }
